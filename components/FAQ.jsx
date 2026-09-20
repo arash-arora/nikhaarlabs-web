@@ -34,18 +34,18 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="py-24 bg-[#0c1d12] relative">
+    <section id="faq" className="py-24 bg-[#F5F1EA] relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
         <div className="text-center space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#e5c158] bg-[#193827] px-4 py-1.5 rounded-full border border-[#e5c158]/30">
-            <HelpCircle className="w-3.5 h-3.5 text-[#e5c158]" /> Got Questions?
+          <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#8A5A10] bg-white px-4 py-1.5 rounded-full border border-[#8A5A10]/30 shadow-sm">
+            <HelpCircle className="w-3.5 h-3.5 text-[#8A5A10]" /> Got Questions?
           </div>
-          <h2 className="text-3xl sm:text-5xl font-serif font-bold text-white tracking-tight">
+          <h2 className="text-3xl sm:text-5xl font-serif font-bold text-[#0D2818] tracking-tight">
             Frequently Asked Questions
           </h2>
-          <p className="text-slate-300 text-sm sm:text-base font-light">
+          <p className="text-[#3D5245] text-sm sm:text-base font-normal">
             Everything you need to know about our organic garment care, pickup service, and fabric restoration process.
           </p>
         </div>
@@ -57,22 +57,22 @@ export default function FAQ() {
             return (
               <div
                 key={idx}
-                className="glass-card rounded-2xl border border-[#e5c158]/20 overflow-hidden transition-all duration-200"
+                className="bg-white rounded-2xl border border-[#8A5A10]/30 shadow-sm overflow-hidden transition-all duration-200"
               >
                 <button
                   onClick={() => toggleFAQ(idx)}
-                  className="w-full p-6 text-left flex items-center justify-between gap-4 font-semibold text-[#f6e6b4] hover:text-[#e5c158] transition-colors focus:outline-none"
+                  className="w-full p-6 text-left flex items-center justify-between gap-4 font-bold text-[#0D2818] hover:text-[#8A5A10] transition-colors focus:outline-none"
                 >
                   <span className="text-base sm:text-lg">{item.q}</span>
                   <ChevronDown
-                    className={`w-5 h-5 text-[#e5c158] shrink-0 transition-transform duration-300 ${
+                    className={`w-5 h-5 text-[#8A5A10] shrink-0 transition-transform duration-300 ${
                       isOpen ? "rotate-180" : ""
                     }`}
                   />
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-6 text-sm text-slate-300 font-light leading-relaxed border-t border-white/5 pt-4">
+                  <div className="px-6 pb-6 text-sm text-[#3D5245] font-normal leading-relaxed border-t border-[#0D2818]/10 pt-4">
                     {item.a}
                   </div>
                 )}
@@ -82,17 +82,17 @@ export default function FAQ() {
         </div>
 
         {/* Direct Help Callout */}
-        <div className="mt-12 text-center p-6 rounded-2xl glass-card border border-[#e5c158]/30">
-          <p className="text-xs text-slate-300">
+        <div className="mt-12 text-center p-6 rounded-2xl bg-white border border-[#8A5A10]/30 shadow-sm">
+          <p className="text-xs text-[#3D5245]">
             Have a special fabric inquiry or custom restoration requirement?
           </p>
           <a
             href="https://wa.me/918130940084?text=Hi%20Nikhaar,%20I%20have%20a%20question%20about%20my%20garment."
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 mt-3 text-xs font-bold text-[#e5c158] hover:underline"
+            className="inline-flex items-center gap-2 mt-3 text-xs font-bold text-[#8A5A10] hover:text-[#0D2818] hover:underline"
           >
-            <Sparkles className="w-3.5 h-3.5" />
+            <Sparkles className="w-3.5 h-3.5 text-[#8A5A10]" />
             <span>Chat Directly with Master Care Specialist on WhatsApp</span>
           </a>
         </div>

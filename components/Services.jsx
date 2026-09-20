@@ -82,18 +82,18 @@ export default function Services() {
   const [activeCategory, setActiveCategory] = useState("all");
 
   return (
-    <section id="services" className="py-24 bg-forest-gradient relative">
+    <section id="services" className="py-24 bg-[#FAF8F5] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#e5c158] bg-[#193827] px-4 py-1.5 rounded-full border border-[#e5c158]/30">
-            <Sparkles className="w-3.5 h-3.5 text-[#e5c158]" /> Full Spectrum Garment Care
+          <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#8A5A10] bg-white px-4 py-1.5 rounded-full border border-[#8A5A10]/30 shadow-sm">
+            <Sparkles className="w-3.5 h-3.5 text-[#8A5A10]" /> Full Spectrum Garment Care
           </div>
-          <h2 className="text-3xl sm:text-5xl font-serif font-bold text-white tracking-tight">
+          <h2 className="text-3xl sm:text-5xl font-serif font-bold text-[#0D2818] tracking-tight">
             Our Bespoke Services
           </h2>
-          <p className="text-slate-300 text-sm sm:text-base font-light">
+          <p className="text-[#3D5245] text-sm sm:text-base font-normal">
             From routine premium maintenance to complex fabric restoration, Nikhaar brings unmatched expertise to every garment in your wardrobe.
           </p>
         </div>
@@ -104,8 +104,8 @@ export default function Services() {
             onClick={() => setActiveCategory("all")}
             className={`px-5 py-2 rounded-full text-xs font-bold transition-all ${
               activeCategory === "all"
-                ? "bg-[#e5c158] text-[#0e2216] shadow-lg"
-                : "glass-card text-slate-300 hover:text-white"
+                ? "bg-[#0D2818] text-[#FAF8F5] shadow-md border border-[#8A5A10]/40"
+                : "bg-white text-[#0D2818] border border-[#0D2818]/15 hover:border-[#8A5A10] shadow-sm"
             }`}
           >
             All Services
@@ -114,8 +114,8 @@ export default function Services() {
             onClick={() => setActiveCategory("Premium Care")}
             className={`px-5 py-2 rounded-full text-xs font-bold transition-all ${
               activeCategory === "Premium Care"
-                ? "bg-[#e5c158] text-[#0e2216] shadow-lg"
-                : "glass-card text-slate-300 hover:text-white"
+                ? "bg-[#0D2818] text-[#FAF8F5] shadow-md border border-[#8A5A10]/40"
+                : "bg-white text-[#0D2818] border border-[#0D2818]/15 hover:border-[#8A5A10] shadow-sm"
             }`}
           >
             Premium Care
@@ -124,8 +124,8 @@ export default function Services() {
             onClick={() => setActiveCategory("Restoration")}
             className={`px-5 py-2 rounded-full text-xs font-bold transition-all ${
               activeCategory === "Restoration"
-                ? "bg-[#e5c158] text-[#0e2216] shadow-lg"
-                : "glass-card text-slate-300 hover:text-white"
+                ? "bg-[#0D2818] text-[#FAF8F5] shadow-md border border-[#8A5A10]/40"
+                : "bg-white text-[#0D2818] border border-[#0D2818]/15 hover:border-[#8A5A10] shadow-sm"
             }`}
           >
             Restoration (Dye, Darning, Charak)
@@ -140,11 +140,11 @@ export default function Services() {
             )
             .map((catGroup, idx) => (
               <div key={idx} className="space-y-6">
-                <div className="border-b border-[#e5c158]/30 pb-3 flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
-                  <h3 className="text-2xl font-serif font-bold text-[#f6e6b4]">
+                <div className="border-b border-[#0D2818]/15 pb-3 flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
+                  <h3 className="text-2xl font-serif font-bold text-[#0D2818]">
                     {catGroup.category}
                   </h3>
-                  <span className="text-xs text-emerald-400 font-medium">
+                  <span className="text-xs text-emerald-700 font-bold">
                     {catGroup.tagline}
                   </span>
                 </div>
@@ -155,53 +155,53 @@ export default function Services() {
                     return (
                       <div
                         key={item.id}
-                        className="glass-card p-6 rounded-2xl flex flex-col justify-between relative group hover:border-[#e5c158]/60 transition-all duration-300"
+                        className="bg-white p-6 rounded-2xl flex flex-col justify-between relative group border border-[#8A5A10]/30 shadow-sm hover:border-[#8A5A10] hover:shadow-lg transition-all duration-300"
                       >
                         {item.popular && (
-                          <div className="absolute top-4 right-4 bg-gradient-to-r from-[#e5c158] to-[#b89326] text-[#0e2216] text-[10px] font-extrabold px-2.5 py-0.5 rounded-full uppercase tracking-wider">
+                          <div className="absolute top-4 right-4 bg-[#0D2818] text-[#FAF8F5] border border-[#8A5A10]/40 text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider">
                             Popular Choice
                           </div>
                         )}
 
                         <div className="space-y-4">
-                          <div className="p-3.5 rounded-xl bg-[#e5c158]/10 text-[#e5c158] w-fit group-hover:scale-110 transition-transform">
+                          <div className="p-3.5 rounded-xl bg-[#FAF8F5] border border-[#8A5A10]/25 text-[#8A5A10] w-fit group-hover:scale-110 transition-transform">
                             <IconComp className="w-6 h-6" />
                           </div>
 
                           <div>
-                            <h4 className="text-xl font-bold text-white group-hover:text-[#f6e6b4] transition-colors">
+                            <h4 className="text-xl font-bold text-[#0D2818] group-hover:text-[#8A5A10] transition-colors">
                               {item.title}
                             </h4>
-                            <p className="text-xs text-[#e5c158] font-medium mt-0.5">
+                            <p className="text-xs text-[#8A5A10] font-bold mt-0.5">
                               {item.subtitle}
                             </p>
                           </div>
 
-                          <p className="text-xs text-slate-300 leading-relaxed font-light">
+                          <p className="text-xs text-[#3D5245] leading-relaxed font-normal">
                             {item.description}
                           </p>
 
                           <ul className="space-y-1.5 pt-2">
                             {item.features.map((feat, fIdx) => (
-                              <li key={fIdx} className="text-[11px] text-slate-400 flex items-center gap-2">
-                                <span className="w-1.5 h-1.5 rounded-full bg-[#e5c158]"></span>
+                              <li key={fIdx} className="text-[11px] text-[#4A5568] flex items-center gap-2">
+                                <span className="w-1.5 h-1.5 rounded-full bg-[#8A5A10]"></span>
                                 <span>{feat}</span>
                               </li>
                             ))}
                           </ul>
                         </div>
 
-                        <div className="pt-6 mt-4 border-t border-[#e5c158]/10 flex items-center justify-between">
+                        <div className="pt-6 mt-4 border-t border-[#0D2818]/10 flex items-center justify-between">
                           <a
                             href={`https://wa.me/918130940084?text=Hi%20Nikhaar,%20I'm%20interested%20in%20your%20${encodeURIComponent(
                               item.title
                             )}%20service.`}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-xs font-bold text-[#f6e6b4] hover:text-[#e5c158] flex items-center gap-1 group-hover:translate-x-1 transition-all"
+                            className="text-xs font-bold text-[#0D2818] hover:text-[#8A5A10] flex items-center gap-1 group-hover:translate-x-1 transition-all"
                           >
                             <span>Book {item.title}</span>
-                            <ArrowUpRight className="w-4 h-4 text-[#e5c158]" />
+                            <ArrowUpRight className="w-4 h-4 text-[#8A5A10]" />
                           </a>
                         </div>
                       </div>

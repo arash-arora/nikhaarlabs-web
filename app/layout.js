@@ -14,9 +14,10 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://nikhaarlabs.com"),
   title: "Nikhaar - The Wardrobe Spa | Organic Dry Cleaning & Fabric Restoration",
-  description: "Nikhaar The Wardrobe Spa provides luxury organic dry cleaning, steam ironing, fabric dyeing, darning (Rafi work), and traditional charak in Faridabad.",
-  keywords: ["Organic Dry Cleaning Faridabad", "Nikhaar Wardrobe Spa", "Luxury Dry Cleaner", "Fabric Dyeing", "Steam Ironing", "Darning Rafi Work", "Charak Roll Press"],
+  description: "Nikhaar The Wardrobe Spa provides luxury organic dry cleaning, steam ironing, fabric dyeing, darning (Rafi work), and traditional charak in Faridabad. Active since 17th August 2026.",
+  keywords: ["Organic Dry Cleaning Faridabad", "Nikhaar Wardrobe Spa", "Luxury Dry Cleaner", "Fabric Dyeing", "Steam Ironing", "Darning Rafi Work", "Charak Roll Press", "Faridabad Dry Cleaner"],
   openGraph: {
     title: "Nikhaar - The Wardrobe Spa",
     description: "Premium Organic Garment Care & Fabric Restoration in Faridabad.",
@@ -42,7 +43,7 @@ export default function RootLayout({ children }) {
       suppressHydrationWarning
       className={`${playfair.variable} ${jakarta.variable} h-full antialiased scroll-smooth`}
     >
-      <body suppressHydrationWarning className="min-h-full flex flex-col bg-[#0e2216] text-slate-100 font-sans selection:bg-[#e5c158] selection:text-[#0e2216]">
+      <body suppressHydrationWarning className="min-h-full flex flex-col bg-[#FAF8F5] text-[#1A2E22] font-sans selection:bg-[#8A5A10] selection:text-white">
         {children}
       </body>
     </html>

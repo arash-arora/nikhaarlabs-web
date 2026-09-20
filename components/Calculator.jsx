@@ -64,14 +64,14 @@ export default function Calculator() {
   return (
     <section id="calculator" className="py-24 bg-[#0c1d12] relative overflow-hidden">
       {/* Background Glow */}
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#e5c158]/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#8A5A10]/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#e5c158] bg-[#193827] px-4 py-1.5 rounded-full border border-[#e5c158]/30">
-            <CalcIcon className="w-3.5 h-3.5 text-[#e5c158]" /> Transparent Estimate
+          <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#8A5A10] bg-[#193827] px-4 py-1.5 rounded-full border border-[#8A5A10]/30">
+            <CalcIcon className="w-3.5 h-3.5 text-[#8A5A10]" /> Transparent Estimate
           </div>
           <h2 className="text-3xl sm:text-5xl font-serif font-bold text-white tracking-tight">
             Wardrobe Spa Price Calculator
@@ -84,10 +84,10 @@ export default function Calculator() {
         <div className="grid lg:grid-cols-12 gap-8 items-start">
           
           {/* Garment Selector (Left 7 Cols) */}
-          <div className="lg:col-span-7 glass-card p-6 sm:p-8 rounded-2xl border border-[#e5c158]/30 space-y-6">
-            <div className="flex items-center justify-between border-b border-[#e5c158]/20 pb-4">
-              <h3 className="text-lg font-bold text-[#f6e6b4] flex items-center gap-2">
-                <ShoppingBag className="w-5 h-5 text-[#e5c158]" /> Select Garments & Services
+          <div className="lg:col-span-7 glass-card p-6 sm:p-8 rounded-2xl border border-[#8A5A10]/30 space-y-6">
+            <div className="flex items-center justify-between border-b border-[#8A5A10]/20 pb-4">
+              <h3 className="text-lg font-bold text-[#8A5A10] flex items-center gap-2">
+                <ShoppingBag className="w-5 h-5 text-[#8A5A10]" /> Select Garments & Services
               </h3>
               {totalItemsCount > 0 && (
                 <button
@@ -105,13 +105,13 @@ export default function Calculator() {
                   key={item.id}
                   className={`p-4 rounded-xl border transition-all flex items-center justify-between ${
                     quantities[item.id] > 0
-                      ? "bg-[#1c402b]/90 border-[#e5c158]/60 shadow-md"
-                      : "bg-[#142e1f]/40 border-white/5 hover:border-[#e5c158]/20"
+                      ? "bg-[#1c402b]/90 border-[#8A5A10]/60 shadow-md"
+                      : "bg-[#142e1f]/40 border-white/5 hover:border-[#8A5A10]/20"
                   }`}
                 >
                   <div>
                     <div className="text-sm font-bold text-white">{item.name}</div>
-                    <div className="text-xs text-[#e5c158] font-medium mt-0.5">
+                    <div className="text-xs text-[#8A5A10] font-medium mt-0.5">
                       Starting at ₹{item.basePrice} <span className="text-[10px] text-slate-400">/ item</span>
                     </div>
                   </div>
@@ -121,7 +121,7 @@ export default function Calculator() {
                     <button
                       onClick={() => updateQuantity(item.id, -1)}
                       disabled={quantities[item.id] === 0}
-                      className="w-8 h-8 rounded-lg bg-black/40 border border-white/10 text-slate-300 disabled:opacity-30 disabled:cursor-not-allowed hover:bg-[#e5c158]/20 flex items-center justify-center transition-colors"
+                      className="w-8 h-8 rounded-lg bg-black/40 border border-white/10 text-slate-300 disabled:opacity-30 disabled:cursor-not-allowed hover:bg-[#8A5A10]/20 flex items-center justify-center transition-colors"
                     >
                       <Minus className="w-4 h-4" />
                     </button>
@@ -130,7 +130,7 @@ export default function Calculator() {
                     </span>
                     <button
                       onClick={() => updateQuantity(item.id, 1)}
-                      className="w-8 h-8 rounded-lg bg-[#e5c158] text-[#0e2216] font-bold hover:bg-[#f6e6b4] flex items-center justify-center shadow-md transition-colors"
+                      className="w-8 h-8 rounded-lg bg-[#8A5A10] text-white font-bold hover:opacity-90 flex items-center justify-center shadow-md transition-colors"
                     >
                       <Plus className="w-4 h-4" />
                     </button>
@@ -141,10 +141,10 @@ export default function Calculator() {
           </div>
 
           {/* Cart Summary & Order Actions (Right 5 Cols) */}
-          <div className="lg:col-span-5 glass-card p-6 sm:p-8 rounded-2xl border border-[#e5c158]/40 bg-gradient-to-b from-[#1a3827] to-[#102418] sticky top-28 space-y-6 gold-glow">
+          <div className="lg:col-span-5 glass-card p-6 sm:p-8 rounded-2xl border border-[#8A5A10]/40 bg-gradient-to-b from-[#1a3827] to-[#102418] sticky top-28 space-y-6 gold-glow">
             
-            <div className="border-b border-[#e5c158]/20 pb-4">
-              <h3 className="text-xl font-serif font-bold text-[#f6e6b4]">Order Summary</h3>
+            <div className="border-b border-[#8A5A10]/20 pb-4">
+              <h3 className="text-xl font-serif font-bold text-[#8A5A10]">Order Summary</h3>
               <p className="text-xs text-slate-300 mt-1">
                 {totalItemsCount} {totalItemsCount === 1 ? "garment" : "garments"} selected
               </p>
@@ -162,7 +162,7 @@ export default function Calculator() {
                 {selectedGarments.map((item) => (
                   <div key={item.id} className="flex items-center justify-between text-xs py-1 border-b border-white/5">
                     <span className="text-slate-200">
-                      {item.name} <strong className="text-[#e5c158]">x{quantities[item.id]}</strong>
+                      {item.name} <strong className="text-[#8A5A10]">x{quantities[item.id]}</strong>
                     </span>
                     <span className="font-semibold text-white">
                       ₹{item.basePrice * quantities[item.id]}
@@ -173,7 +173,7 @@ export default function Calculator() {
             )}
 
             {/* Subtotal & Doorstep Info */}
-            <div className="pt-4 border-t border-[#e5c158]/20 space-y-3">
+            <div className="pt-4 border-t border-[#8A5A10]/20 space-y-3">
               <div className="flex items-center justify-between text-sm">
                 <span className="text-slate-300">Estimated Total:</span>
                 <span className="text-2xl font-serif font-bold text-gold-metallic">
@@ -181,7 +181,7 @@ export default function Calculator() {
                 </span>
               </div>
 
-              <div className="p-3 rounded-xl bg-[#0e2216]/80 border border-[#e5c158]/20 text-xs space-y-1">
+              <div className="p-3 rounded-xl bg-[#0e2216]/80 border border-[#8A5A10]/20 text-xs space-y-1">
                 <div className="flex items-center gap-1.5 text-emerald-400 font-semibold">
                   <CheckCircle2 className="w-4 h-4" />
                   <span>Free Doorstep Pickup & Delivery</span>
@@ -201,9 +201,9 @@ export default function Calculator() {
               }
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-3 w-full py-4 rounded-xl bg-gradient-to-r from-[#f6e6b4] via-[#e5c158] to-[#b89326] text-[#0e2216] font-extrabold text-sm shadow-xl hover:shadow-[#e5c158]/30 hover:scale-[1.02] transition-all"
+              className="flex items-center justify-center gap-3 w-full py-4 rounded-xl bg-[#8A5A10] text-white font-extrabold text-sm shadow-xl hover:shadow-[#8A5A10]/30 hover:scale-[1.02] transition-all"
             >
-              <MessageCircle className="w-5 h-5 fill-[#0e2216]" />
+              <MessageCircle className="w-5 h-5 fill-white" />
               <span>Book Order on WhatsApp</span>
             </a>
 
